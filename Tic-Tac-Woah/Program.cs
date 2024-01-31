@@ -8,8 +8,12 @@ namespace Tic_Tac_Woah
 {
     internal class Program
     {
-        // Welcome the user to the game
-        Console.WriteLine("Welcome to the Game!");
+        static void Main(string[] args)
+        {
+            // Welcome the user to the game
+            Console.WriteLine("Welcome to the Game!");
 
+          
+        }
     }
 }
