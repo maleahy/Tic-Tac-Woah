@@ -15,5 +15,8 @@ namespace Tic_Tac_Woah
 
           
         }
+        // Welcome the user to the game
+        Console.WriteLine("Welcome to the Game!");
+        Console.WriteLine("Su made a change!")
     }
 }
