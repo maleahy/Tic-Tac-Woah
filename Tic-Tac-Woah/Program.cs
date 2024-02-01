@@ -54,12 +54,9 @@ namespace Tic_Tac_Woah
                     continue;
                 }
 
-                // Need the other class that tells who is the winner HERE
+                // HERE *Print the board by calling the method in the supporting class
+                // HERE *Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
             }
-
-
-            // *Print the board by calling the method in the supporting class
-            // *Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
         }
     }
 }
