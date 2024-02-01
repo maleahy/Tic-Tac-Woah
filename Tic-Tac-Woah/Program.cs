@@ -55,7 +55,12 @@ namespace Tic_Tac_Woah
                 }
 
                 // HERE *Print the board by calling the method in the supporting class
+                    // GameHelper gh = new GameHelper (Something like this maybe?)
+                    //GameHelper.printboard(board); (Something like this maybe?)
                 // HERE *Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
+
+                    // string winner = GameHelper.CheckWinner(board); (Something like this maybe?)
+                    // Console.WriteLine("Game Over. The winner is the player: " + result); (Something like this maybe?)
             }
         }
     }
