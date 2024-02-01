@@ -26,15 +26,15 @@ namespace Tic_Tac_Woah
             for (int turn = 0; turn < 9; turn++)
             {
                 Console.WriteLine("Player " + (turn % 2 == 0 ? "1" : "2") + "'s turn. Choose a position (1-9): ");
-                string input = Console.ReadLine(); // Receive user's input. (The input is string)
+                string input = Console.ReadLine(); // Receive user's input. (This input is string)
                 int choice;
                 bool isValid = int.TryParse(input, out choice); // Convert the string input to integer
                 char playerSymbol = turn % 2 == 0 ? 'X' : 'O'; // Determine each player's symbol to mark
 
-                if (isValid && choice >= 1 && choice <= 9) // Check the user input whether valid or not
+                if (isValid && choice >= 1 && choice <= 9) // Check the user input if they were between 1 to 9
                 {
-                    int row = (choice - 1) / 3; // Calculate row in an array
-                    int col = (choice - 1) % 3; // Calculate column in an array
+                    int row = (choice - 1) / 3; // Calculate the row index in the array
+                    int col = (choice - 1) % 3; // Calculate the column index in the array
 
                     if (board[row, col] != 'X' && board[row, col] != 'O') // Check if the board is empty
                     {
