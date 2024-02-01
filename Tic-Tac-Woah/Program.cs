@@ -38,7 +38,7 @@ namespace Tic_Tac_Woah
 
                     if (board[row, col] != 'X' && board[row, col] != 'O') // Check if the board is empty
                     {
-                        board[row, col] = playerSymbol; // Mark player's symbol
+                        board[row, col] = playerSymbol; // Update the game board with player's symbol
                     }
                     else
                     {
