@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Tic_Tac_Woah
+ namespace Tic_Tac_Woah
 {
     internal class Program
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
             // *Welcome the user to the game
             Console.WriteLine("Welcome to the Game!");
@@ -55,14 +55,14 @@ namespace Tic_Tac_Woah
                 }
 
                 // HERE *Print the board by calling the method in the supporting class
-                TicTacToeGame ttt = new TicTacToeGame;
+                TicTacToeGame ttt = new TicTacToeGame();
                 ttt.PrintBoard(board); 
 
                 // HERE *Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
 
                 string winner = ttt.CheckWinner(board);
-                Console.WriteLine("Game Over. The winner is the player: " + result);
+                Console.WriteLine("Game Over");
             }
         }
-    }
-}
+     }
+  }
