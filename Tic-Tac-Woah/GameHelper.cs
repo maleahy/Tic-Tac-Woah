@@ -54,9 +54,10 @@ namespace Tic_Tac_Woah
             if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
                 return $"Player {board[0, 2]} wins.";
 
-            if (turn == 9)
+            if (turn == 8)
                 return "Game is a tie!";
-            return "Game continues.";
+            else
+                return "Game continues.";
 
 
         }

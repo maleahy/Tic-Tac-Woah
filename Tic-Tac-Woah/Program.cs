@@ -62,11 +62,16 @@ internal class Program
 
 
             string winner = TicTacToeGame.CheckWinner(board, turn);
+            Console.WriteLine($"Turn: {turn}");
             if (winner != "Game continues.")
             {
                 Console.WriteLine(winner);
+                TicTacToeGame.PrintBoard(board);
                 break;
             }
+
+
+            
 
 
             /*
