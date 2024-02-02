@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,32 +35,31 @@ namespace Tic_Tac_Woah
 
 
         // Method to check for a winner or a tie
-        public static char CheckWinner(char[,] board)
+        public static string CheckWinner(char[,] board, int turn)
         {
             // Check rows, columns, and diagonals for a winner, iterating through each row and columns
             for (int i = 0; i < 3; i++)
             {
                 // Runs through each row to see if either player won
-                if (board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2] && board[i, 0] != ' ')
-                    return board[i, 0];
+                if (board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
+                    return $"Player {board[i, 0]} wins.";
                 // Checks through each column to see if either player won
-                if (board[0, i] == board[1, i] && board[1, i] == board[2, i] && board[0, i] != ' ')
-                    return board[0, i];
+                if (board[0, i] == board[1, i] && board[1, i] == board[2, i])
+                    return $"Player {board[0, i]} wins.";
             }
             // Checks diagonal top left to bottom right
-            if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' ')
-                return board[0, 0];
+            if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
+                return $"Player {board[0, 0]} wins.";
             // Checks diagonal top right to bottom left
-            if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
-                return board[0, 2];
+            if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
+                return $"Player {board[0, 2]} wins.";
 
-            // Check for a tie
-            for (int i = 0; i < 3; i++)
-                for (int j = 0; j < 3; j++)
-                    if (board[i, j] == ' ')
-                        return ' '; // Game continues
+            if (turn == 9)
+                return "Game is a tie!";
+            return "Game continues.";
 
-            return 'T'; // Tie game
+
         }
     }
 }
+
