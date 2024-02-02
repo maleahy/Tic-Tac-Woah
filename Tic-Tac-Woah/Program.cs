@@ -24,6 +24,7 @@ using Tic_Tac_Woah;
             // *Ask each player in turn for their choice and update the game board array
             for (int turn = 0; turn < 9; turn++)
             {
+                TicTacToeGame.PrintBoard(board);
                 Console.WriteLine("Player " + (turn % 2 == 0 ? "1" : "2") + "'s turn. Choose a position (1-9): ");
                 string input = Console.ReadLine(); // Receive user's input. (This input is string)
                 int choice;
@@ -54,13 +55,14 @@ using Tic_Tac_Woah;
                 }
 
                 // HERE *Print the board by calling the method in the supporting class
-                TicTacToeGame.PrintBoard(board);
+                //TicTacToeGame.PrintBoard(board);
                 //ttt.PrintBoard(board); 
 
                 // HERE *Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
 
                 char winner = TicTacToeGame.CheckWinner(board);
-                Console.WriteLine("Game Over");
+                Console.WriteLine(winner);
+                //Console.WriteLine("Game Over");
             }
         }
      }
